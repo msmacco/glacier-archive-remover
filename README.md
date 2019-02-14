@@ -11,4 +11,5 @@ Requirements:
   - "aws glacier get-job-output --account-id - --vault-name YOUR_VAULT_NAME --job-id THE_JOB_ID output.json" (the job id is written in the previous commands output)
 
 Usage:
-bash eletearchive.sh -a AWS_ACCOUNT_ID -r AWS_REGION -v AWS_VAULT_NAME -f PATH_TO_FILE
+
+"bash eletearchive.sh -a AWS_ACCOUNT_ID -r AWS_REGION -v AWS_VAULT_NAME -f PATH_TO_FILE"
