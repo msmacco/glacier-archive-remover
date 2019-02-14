@@ -29,7 +29,7 @@ total_archive_number=${#archive_ids[@]}
 for archive_id in ${archive_ids[@]}; do
 	current_archive_number=$((${current_archive_number}+1))
     echo ${current_archive_number}/${total_archive_number} Deleting Archive: ${archive_id}
-    #aws glacier delete-archive --archive-id=${archive_id} --vault-name ${AWS_VAULT_NAME} --account-id ${AWS_ACCOUNT_ID} --region ${AWS_REGION}
+    aws glacier delete-archive --archive-id=${archive_id} --vault-name ${AWS_VAULT_NAME} --account-id ${AWS_ACCOUNT_ID} --region ${AWS_REGION}
 done
 
 echo "Finished deleting archives"
