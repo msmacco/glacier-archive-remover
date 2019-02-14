@@ -9,7 +9,7 @@ Requirements:
   - "aws configure" (enter credentials)
   - "aws glacier initiate-job --account-id - --vault-name YOUR_VAULT_NAME --job-parameters '{"Type": "inventory-retrieval"}'"
   - "aws glacier list-jobs --account-id - --vault-name YOUR_VAULT_NAME" (return status of inventory job and its ID, wait until its completed. This may take a while)
-  - "aws glacier get-job-output --account-id - --vault-name YOUR_VAULT_NAME --job-id THE_JOB_ID output.json" (the job id is written in the previous commands output)
+  - "aws glacier get-job-output --account-id - --vault-name YOUR_VAULT_NAME --job-id THE_JOB_ID output.json" (creates an output file with list of archives)
 
 Usage:
 
