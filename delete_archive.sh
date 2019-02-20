@@ -21,6 +21,7 @@ fi
 
 ######
 echo "initiate inventory-retrieval"
+echo "Job startet: $(date)"
 aws glacier initiate-job --account-id - --vault-name ${AWS_VAULT_NAME} --job-parameters '{"Type": "inventory-retrieval"}' > temp.json
 
 job_id=$( jq -r '.jobId' ./temp.json)
@@ -63,3 +64,4 @@ done
 echo "Finished deleting archives"
 echo "Deleting Files"
 rm temp.json
+echo "Job Finished: $(date)"
