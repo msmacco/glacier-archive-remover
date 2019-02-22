@@ -1,5 +1,6 @@
 # glacier-archive-remover
 Amazon Glacier Vault Remover. Allows you to delete multiple amazon archives in a glacier vault using AWS Command Line Interface.
+As long as you cannot delete Non-Empty Vaults in AWS Glacier, this is necessary step to empty the vault.
 
 
 Requirements:
