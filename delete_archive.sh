@@ -19,7 +19,7 @@ if [[ -z $AWS_ACCOUNT_ID ]] || [[ -z $AWS_REGION ]] || [[ -z $AWS_VAULT_NAME ]];
 	exit 1
 fi
 
-######
+#######
 echo "initiate inventory-retrieval"
 echo "Job startet: $(date)"
 aws glacier initiate-job --account-id - --vault-name ${AWS_VAULT_NAME} --job-parameters '{"Type": "inventory-retrieval"}' > temp.json
